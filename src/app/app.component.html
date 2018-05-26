@@ -1,0 +1,18 @@
+<div>
+  <h1>Goodreads App</h1>
+  <input  type="text" class="form-control" #searchInput [(ngModel)]="searchTerm"/>
+  <button (click)="searchBooks()">Search</button>
+  <div fxLayout="row wrap" fxLayoutAlign="space-between">
+  <div fxFlex="20" fxLayout="column" fxLayoutAlign="space-around" class="books-container" *ngFor='let book of books | paginate: {itemsPerPage: 10, currentPage:pageNum, id: "1"}; let i = index'>
+      <h3 class="book-title">{{ book.title }}</h3>
+      <h4 class="book-author">{{ book.author }}</h4>
+      <div class="book-img"><img [src]='book.imgUrl' /></div>
+
+  </div>
+</div>
+  <pagination-controls (pageChange)="pageNum = $event" id="1"
+                      maxSize="5"
+                      directionLinks="true"
+                      autoHide="true">
+                </pagination-controls>`
+</div>

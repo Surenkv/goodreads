@@ -1,0 +1,15 @@
+.books-container{
+    border: 1px dashed grey;
+  }
+  .book-title{
+    margin: 2%;
+    color: green;
+  }
+  .book-author{
+    margin: 0 2%;
+    color: grey;
+  }
+  .book-img{
+    padding: 0 2%;
+  }
+  
